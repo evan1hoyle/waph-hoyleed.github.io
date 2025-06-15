@@ -155,23 +155,14 @@
     
     function checkCookie(){
         const now = new Date();
-
         username=getCookie('username');
-        alert(username);
         if(username!=null && username!=""){
             alert('welcome again! \n Date of last visit: ' + now.toLocaleString() + '!');
             setCookie('username',now.toLocaleString(),365);
-
-            username=getCookie('username');
-            alert(username);
         }
         else {
             alert('Welcome to my homepage for the first time! \n ' + now.toLocaleString());
             setCookie('username',now.toLocaleString(),365);
-
-            username=getCookie('username');
-            alert(username);
-
             }
     }
     </script>
