@@ -1,120 +1,376 @@
-<a href="https://info.flagcounter.com/VzyH"><img src="https://s01.flagcounter.com/count2/VzyH/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        
+        <a href="https://info.flagcounter.com/iVF0"><img src="https://s01.flagcounter.com/count2/iVF0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+        
+        <div class="wrapper">
+            <div id="digit-clock">
+                <script>
+                function displayTime() {
+                    document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+                }
+                setInterval(displayTime, 500);
+                </script>
+            </div>
+            <script type="text/javascript">
+    function displayTime(){
+      document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+    }
+    
+    setInterval(displayTime,500);
+    
+    // code for the analog clock
+    var canvas = document.getElementById('analog-clock');
+    var ctx = canvas.getContext('2d');
+    var radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    radius = radius * 0.90
+    
+    setInterval(drawClock, 1000);
+    
+    function drawClock() {
+      drawFace(ctx, radius);
+      drawNumbers(ctx, radius);
+      drawTime(ctx, radius);
+    }
+
+    function getEcho() {
+    var input = document.getElementById("data").value;
+    if (input.length == 0) {
+      return;
+    }
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log("Received data="+xhttp.responseText);
+        document.getElementById("response").innerText = "Response from server: " + xhttp.responseText;
+        //code to show the data
+      }
+    };
+    xhttp.open("GET", "echo.php?data="+input, true);
+    //code to create an Ajax request
+    xhttp.send(); //code to send the request
+    document.getElementById("data").value = "";
+    }
+  
+    </script>
+
+    <div class="wrapper">
+
+        <div id="digit-clock"></div> 
+        <canvas id="analog-clock" width="150" height="150" style="background-color:#333"></canvas>
+        <script src="https://waph-phung.github.io/clock.js"></script>
+    </div>
+
+    <script type="text/javascript">
+        function displayTime(){
+          document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+        }
+        
+        setInterval(displayTime,500);
+        
+        // code for the analog clock
+        var canvas = document.getElementById('analog-clock');
+        var ctx = canvas.getContext('2d');
+        var radius = canvas.height / 2;
+        ctx.translate(radius, radius);
+        radius = radius * 0.90
+        
+        setInterval(drawClock, 1000);
+        
+        function drawClock() {
+          drawFace(ctx, radius);
+          drawNumbers(ctx, radius);
+          drawTime(ctx, radius);
+        }
+    
+        function getEcho() {
+        var input = document.getElementById("data").value;
+        if (input.length == 0) {
+          return;
+        }
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            console.log("Received data="+xhttp.responseText);
+            document.getElementById("response").innerText = "Response from server: " + xhttp.responseText;
+            //code to show the data
+          }
+        };
+        xhttp.open("GET", "echo.php?data="+input, true);
+        //code to create an Ajax request
+        xhttp.send(); //code to send the request
+        document.getElementById("data").value = "";
+        }
+      
+        </script>
+
+
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-  body {
-    font: 20px Montserrat, sans-serif;
-    line-height: 1.8;
-    color: #f5f6f7;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
-  }
-  .bg-2 { 
-    background-color: #474e5d; /* Dark Blue */
-    color: #ffffff;
-  }
-  .bg-3 { 
-    background-color: #ffffff; /* White */
-    color: #555555;
-  }
-  .bg-4 { 
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
-  }
-  .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-    color: #1abc9c !important;
-  }
-  </style>
-</head>
-<body>
+    test
+    <script>
+    
+    function setCookie(c_name,value,expiredays){
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate()+expiredays);
+        if(expiredays==null)
+            document.cookie = c_name + "=" + escape(value) +"";
+        else
+            document.cookie = c_name + "=" + escape(value) + ";expires="
+            +exdate.toGMTString();
+    }
+    
+    function getCookie(c_name){
+        if(document.cookie.length>0)
+        {
+    
+            c_start=document.cookie.indexOf(c_name + "=");
+          if(c_start!=-1){
+                c_start=c_start + c_name.length +1;
+                //index of the value's end 
+                c_end=document.cookie.indexOf(";",c_start);
+                if(c_end==-1)//if it's the last cookie
+                    c_end = document.cookie.length;
+                return unescape (document.cookie.substring(c_start,c_end));
+            }
+        }
+        return "";
+    }
+    
+    function checkCookie(){
+        username=getCookie('username');
+        if(username!=null && username!="")
+            alert('welcome again ' + username+ '!');
+        else {
+            username=prompt('please enter your name:',"");
+            if(username!=null && username!="")
+                setCookie('username',username,365);
+            }
+    }
+    </script>
+    </head>
 
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Me</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <body onload="checkCookie()">
+        za
+    </body>
 
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Who Am I?</h3>
-  <img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an adventurer</h3>
-</div>
 
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
-</div>
-
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
-</footer>
-
-</body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Evan Hoyle</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpeg" alt="headshot" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Evan
+                        <span class="text-primary">Hoyle</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        206 Hollins Ferry Rd s, Glen Burnie MD, 21061·
+                        <a class="social-icon-text" id="email" onclick="showhideEmail()">Show my email</a>
+                        
+                    </div>
+                    <p class="lead mb-5">I am a student studying computer science with intrest in red teaming and security research. I have experience with CTFs and common pen-testing framworks. </p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div>
+                        <h2>Random Programming Joke</h2>
+                            <p id="joke">Loading...</p>
+                        
+                            <script>
+                                $(document).ready(function () {
+                                    $.ajax({
+                                        url: "https://v2.jokeapi.dev/joke/Programming?type=single",
+                                        method: "GET",
+                                        success: function (response) {
+                                            $('#joke').text(response.joke);
+                                        },
+                                    });
+                                });
+                            </script>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineer</h3>
+                            <div class="subheading mb-3">Department of Defense</div>
+                            <p>Developed streaming analytics to process real-time data feeds in Java and Flink. </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2024 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Cyber Software Engineering</h3>
+                            <div class="subheading mb-3">Northrop Grumman</div>
+                            <p>Developed and evaluated secure and advanced networking applications using C, Python and Wireshark</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2022 - August 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Owner</h3>
+                            <div class="subheading mb-3">Hoyle Residential Services LLC</div>
+                            <p>Performed maintenance on residential homes</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">April 2020 - August 2021</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Cincinnati</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Computer Science</div>
+                            <p>GPA: 3.85</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2021 - April 2026</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-java" title="Java"></i> Java</li>
+                        <li class="list-inline-item"><i class="fas fa-cogs" title="C"></i> C</li> <li class="list-inline-item"><i class="fab fa-python" title="Python"></i> Python</li>
+                        <li class="list-inline-item"><i class="fas fa-language" title="Golang"></i> Golang</li> <li class="list-inline-item"><i class="fab fa-html5" title="HTML5"></i> HTML5</li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt" title="CSS3"></i> CSS3</li>
+                        <li class="list-inline-item"><i class="fab fa-js-square" title="JavaScript"></i> JavaScript</li>
+                    </ul>
+                    <div class="subheading mb-3">Technologies & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fas fa-database" title="Database Management"></i> MySQL</li>
+                        <li class="list-inline-item"><i class="fas fa-terminal" title="Networking Applications"></i> Networking Applications (Wireshark)</li>
+                        <li class="list-inline-item"><i class="fab fa-git-alt" title="Git Version Control"></i> Git</li>
+                        <li class="list-inline-item"><i class="fab fa-gitlab" title="GitLab CI/CD"></i> GitLab CI/CD</li>
+                        <li class="list-inline-item"><i class="fab fa-jenkins" title="Jenkins CI/CD"></i> Jenkins CI/CD</li>
+                        <li class="list-inline-item"><i class="fas fa-server" title="Virtual Machines"></i> Virtual Machines</li>
+                        <li class="list-inline-item"><i class="fab fa-docker" title="Container Technology"></i> Docker</li>
+                        <li class="list-inline-item"><i class="fab fa-raspberry-pi" title="Raspberry Pi / IoT Development"></i> Raspberry Pi / IoT</li>
+                        <li class="list-inline-item"><i class="fas fa-code-branch" title="API Integration"></i> API Integration</li>
+                        <li class="list-inline-item"><i class="fas fa-stream" title="Streaming Analytics"></i> Streaming Analytics (Flink)</li>
+                        <li class="list-inline-item"><i class="fas fa-microchip" title="Embedded Systems"></i> Embedded Systems</li>
+                    </ul>
+                    <div class="subheading mb-3">Methodologies & Concepts</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Project Management & Scrum
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            User Story Estimation
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Secure Programming Practices
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross-Functional Team Collaboration
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Social Network Analysis
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Apart from being a software engineer I enjoy the outdoor and enjoy camping, hiking, hunting, fishing and running. I recently hit a PR in the flying pig marathon with a finishing time of 3:59. </p>
+                    <p class="mb-0">I also enjoy playing card games with friend particularly poker. </p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Dean's List - University of Cincinnati
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            National Co-op Ambassador - University of Cincinnati
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                        
+                            Scholarship of Service - University of Cincinnati
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
