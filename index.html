@@ -133,8 +133,7 @@
         if(expiredays==null)
             document.cookie = c_name + "=" + escape(value) +"";
         else
-            document.cookie = c_name + "=" + escape(value) + ";expires="
-            +exdate.toGMTString();
+            document.cookie = c_name + "=" + escape(value) + ";expires="+exdate.toGMTString();
     }
     
     function getCookie(c_name){
@@ -161,11 +160,18 @@
         alert(username);
         if(username!=null && username!=""){
             alert('welcome again! \n Date of last visit: ' + now.toLocaleString() + '!');
-            setCookie('username',now.toLocaleString,365);
+            setCookie('username',now.toLocaleString(),365);
+
+            username=getCookie('username');
+            alert(username);
         }
         else {
             alert('Welcome to my homepage for the first time! \n ' + now.toLocaleString());
-            setCookie('username',now.toLocaleString,365);
+            setCookie('username',now.toLocaleString(),365);
+
+            username=getCookie('username');
+            alert(username);
+
             }
     }
     </script>
